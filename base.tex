@@ -1,0 +1,41 @@
+\documentclass[aspectratio=1610,10pt]{beamer}
+\usepackage[absolute,overlay]{textpos}
+
+\usetheme[background=light, titleformat=regular, progressbar=fancy]{metropolis}
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+% \usetheme[background=light]{metropolis}
+
+\title{Higgs Physics at CMS}
+\subtitle{Properties and searches beyond SM}
+\date{\today}
+\author{Markus Spanring}
+\institute{On behalf of the CMS collaboration}
+\titlegraphic{\hfill\includegraphics[height=2cm]{pics/cms.pdf}}{}
+
+\newcommand{\textbox}[1]{\parbox[b][2.5mm]{.33\textwidth}{#1}}
+\setbeamertemplate{frame footer}[custom]{%
+  \textbox{\textsc{\insertauthor}}
+  \hfill
+  \textbox{\hfill\insertframenumber}
+}
+\begin{document}
+
+\maketitle
+\begin{frame}{Table of contents}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\include{content}
+
+\end{document}
